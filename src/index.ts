@@ -14,6 +14,8 @@ async function main() {
 
     const raw = await db.query(plan);
 
+    console.log("Database connection test result:", raw);
+
     console.log("Database connected successfully!");
 
     app.listen(PORT, () => {
