@@ -1,11 +1,11 @@
 // use prisma-8
-
 model User {
-  id        String      @id @onCreate(uuid())
-  username  String @unique
+  id        String                     @id @onCreate(uuid())
+  username  String                     @unique
+  email     String                     @unique
   name      String
   phone     String
   role      String?
-  createdAt TimestamptzString @default(now())
+  createdAt TimestamptzString          @default(now())
   updatedAt temporal.updatedAtString()
 }

@@ -1,9 +1,12 @@
 import express from "express";
 import { db } from "./prisma/db";
+import userRouter from "./router";
 
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+
+app.use("/user", userRouter);
 
 async function main() {
   try {
